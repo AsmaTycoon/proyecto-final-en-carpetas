@@ -1,20 +1,31 @@
 <div class="row">
-    <div class="col-lg-12">
     <h1>Experiencia Laboral</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva Experiencia
+        </button>
     </div>
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <ul>
-            <li><h1>Trabajo 1</h1> - <h3>(years)</h3></li>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quod pariatur, nostrum necessitatibus ut sed esse dolore quam dolores voluptates excepturi fugiat corporis incidunt distinctio enim maxime error voluptatum cum!</p>
-        </ul>
-        <ul>
-            <li><h1>Trabajo 2</h1> - <h3>(years)</h3></li>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quod pariatur, nostrum necessitatibus ut sed esse dolore quam dolores voluptates excepturi fugiat corporis incidunt distinctio enim maxime error voluptatum cum!</p>
-        </ul>
-        <ul>
-            <li><h1>Trabajo 3</h1> - <h3>(years)</h3></li>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quod pariatur, nostrum necessitatibus ut sed esse dolore quam dolores voluptates excepturi fugiat corporis incidunt distinctio enim maxime error voluptatum cum!</p>
-        </ul>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of expe">
+                    <td>
+                        <h3>{{Experiencia.nombreE}}</h3>
+                    </td>
+                    <td>
+                        <h4>{{Experiencia.descripcionE}}</h4>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-success" routerLink="/editexp/{{Experiencia.id}}">
+                            <i class="bi bi-pencil-square"></i> EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

@@ -9,24 +9,73 @@ div{
 @media (min-width: 576px){
     #fotodeperfil{
         position: absolute;
-        width: 95%;
+        width: 17%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 10%;
-        bottom: -70px;
+        left: 3%;
+        bottom: -400px;
     }
 }
 @media (max-width: 575px){
     #fotodeperfil{
         position: absolute;
-        width: 35%;
+        width: 45%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 33%;
-        bottom: -70px;
+        left: 30%;
+        bottom: -150px;
     }
 }
-
+@media (max-width: 1000px){
+    #fotodeperfil{
+        position: absolute;
+        width: 18%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 5%;
+        bottom: -50px;
+    }
+}
+@media (max-width: 2000px){
+    #fotodeperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 4%;
+        bottom: -40px;
+    }
+}
+@media (max-width: 3000px){
+    #fotodeperfil{
+        position: absolute;
+        width: 17%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 3%;
+        bottom: -380px;
+    }
+}
+@media (min-width: 3000px){
+    #fotodeperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 4%;
+        bottom: 700px;
+    }
+}
+@media (min-width: 4000px){
+    #fotodeperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 4%;
+        bottom: 1200px;
+    }
+}
 /*etiqueta nombre*/
 #nombre{
     font-weight: bold;
